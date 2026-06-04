@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Star, Clock, Users, Play, Lock, ChevronRight, Award } from "lucide-react";
 import { seedDatabase } from "@/lib/seed";
 
+export const dynamic = "force-dynamic";
+
 export default async function CourseDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  await seedDatabase();
+  try { await seedDatabase(); } catch {}
   const { id } = await params;
 
   const course = await prisma.course.findUnique({
