@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030712;
+  --foreground: #f9fafb;
+  --gold: #d4af37;
+  --gold-light: #f0d060;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #d4af37, #f0d060);
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.bg-gold {
+  background-color: #d4af37;
+}
+
+.border-gold {
+  border-color: #d4af37;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    #030712 0%,
+    #0f172a 50%,
+    #1e1b4b 100%
+  );
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+}
+
+.video-card:hover .play-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.play-btn {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
